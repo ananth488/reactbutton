@@ -22,6 +22,9 @@ export default class Classcom extends React.Component{
       console.log("update")
     } 
 
+    componentWillUnmount(){
+        console.log("WillUnmount")
+    }
     render(){
     console.log("render")
 
@@ -38,4 +41,6 @@ export default class Classcom extends React.Component{
             </>
         )
     }
+
+   
 }

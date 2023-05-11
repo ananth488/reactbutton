@@ -5,16 +5,18 @@ export default class Subcribe extends React.Component {
     constructor() {
         
         super();
-        // this.state = { count: 40, name: "are't Eligible", value: "Subcribe" }
-        // this.incress=this.setCount.bind(this)
+        this.state = { count: 40, name: "are't Eligible", value: "Subcribe" }
 
-        this.state = { count: 0 }
+        const {count,name,value}=this.state
+        // this.incress=this.setCount.bind(this)
+      console.log(count,name,value)
+        this.state = {count: 0 }
         this.plus = this.setChange.bind(this)
         this.minus = this.setChanges.bind(this)
     }
 
     setChange() {
-        this.setState({ count: this.state.count + 1 })
+        this.setState({ count: this.state.count + 1})
         if(this.state.count >19)
         {
             this.setState({count:20})
@@ -45,7 +47,7 @@ export default class Subcribe extends React.Component {
         //     this.setState({name: "Eligible"})
         // }     
     }
-     componentDidUpdate(){
+     componentDidUpdate(){  
         console.log("update");
      }
     render() {
